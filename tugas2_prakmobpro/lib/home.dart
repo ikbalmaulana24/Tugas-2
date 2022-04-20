@@ -36,9 +36,7 @@ class _homapageState extends State<homapage> {
               onPressed : () {
                 Navigator.push(
                   context, MaterialPageRoute(
-                    builder: (context){
-                      return profilePage();
-                    }
+                    builder: (context) => profilePage()
                   )
                 );
               }, 
@@ -46,7 +44,7 @@ class _homapageState extends State<homapage> {
             ),
           ),
         ],
-        backgroundColor: ijotua,
+        backgroundColor: ijo,
       ),
 
       body: SafeArea(

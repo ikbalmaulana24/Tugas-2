@@ -27,7 +27,7 @@ class _loginState extends State<login> {
                     Text(
                       'BERKAH', 
                       style: satu.copyWith(
-                        color: ijotua
+                        color: ijo
                       ),
                     ),
                   ],
@@ -66,7 +66,7 @@ class _loginState extends State<login> {
                   Column(
                     children: [
                       FloatingActionButton.extended(
-                        backgroundColor: ijotua,
+                        backgroundColor: ijo,
                         foregroundColor: Colors.white,
                         onPressed: () {
                           Navigator.push(
@@ -97,7 +97,7 @@ class _loginState extends State<login> {
                         'Daftar Di Sini',
                         style: TextStyle(
                           fontSize: 13,
-                          color: ijotua,
+                          color: ijo,
                           fontWeight: FontWeight.w700,
                         ),
                       )
