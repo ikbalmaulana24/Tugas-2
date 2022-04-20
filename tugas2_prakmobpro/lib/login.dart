@@ -19,7 +19,19 @@ class _loginState extends State<login> {
             SizedBox(height: 100,),
             Column(
               children: [
-                Text('TOKO BERKAH', style: satu,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('JASA', style: satu,),
+                    SizedBox(width: 5,),
+                    Text(
+                      'BERKAH', 
+                      style: satu.copyWith(
+                        color: ijotua
+                      ),
+                    ),
+                  ],
+                ),
                 SizedBox(height: 30,),
                 Image.asset('assets/toko.png', height: 230,)
               ],
