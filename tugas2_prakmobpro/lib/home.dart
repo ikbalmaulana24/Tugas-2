@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas2_prakmobpro/profile.dart';
 import 'package:tugas2_prakmobpro/warna.dart';
 
 class homapage extends StatefulWidget {
@@ -32,7 +33,15 @@ class _homapageState extends State<homapage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: IconButton(
-              onPressed : () {}, 
+              onPressed : () {
+                Navigator.push(
+                  context, MaterialPageRoute(
+                    builder: (context){
+                      return profilePage();
+                    }
+                  )
+                );
+              }, 
               icon: Icon(Icons.account_circle_sharp, size: 30,),
             ),
           ),
@@ -100,7 +109,7 @@ class _homapageState extends State<homapage> {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
