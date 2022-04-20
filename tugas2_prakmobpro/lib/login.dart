@@ -19,7 +19,19 @@ class _loginState extends State<login> {
             SizedBox(height: 100,),
             Column(
               children: [
-                Text('TOKO BERKAH', style: satu,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('JASA', style: satu,),
+                    SizedBox(width: 5,),
+                    Text(
+                      'BERKAH', 
+                      style: satu.copyWith(
+                        color: ijo
+                      ),
+                    ),
+                  ],
+                ),
                 SizedBox(height: 30,),
                 Image.asset('assets/toko.png', height: 230,)
               ],
@@ -54,7 +66,7 @@ class _loginState extends State<login> {
                   Column(
                     children: [
                       FloatingActionButton.extended(
-                        backgroundColor: ijotua,
+                        backgroundColor: ijo,
                         foregroundColor: Colors.white,
                         onPressed: () {
                           Navigator.push(
@@ -85,7 +97,7 @@ class _loginState extends State<login> {
                         'Daftar Di Sini',
                         style: TextStyle(
                           fontSize: 13,
-                          color: ijotua,
+                          color: ijo,
                           fontWeight: FontWeight.w700,
                         ),
                       )

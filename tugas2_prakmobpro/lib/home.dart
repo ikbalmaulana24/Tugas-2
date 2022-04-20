@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas2_prakmobpro/profile.dart';
 import 'package:tugas2_prakmobpro/warna.dart';
 
 class homapage extends StatefulWidget {
@@ -13,19 +14,37 @@ class _homapageState extends State<homapage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
-        title: Text('Berkah', style: dua,),
+        title: Text('Jasa Berkah', style: dua,),
+        automaticallyImplyLeading: false,
         actions: [
           //Icon(Icons.favorite),
+          // Container(
+          //   padding: EdgeInsets.only(left: 2, right: 2, bottom: 2, top: 2),
+          //   margin: EdgeInsets.only(top: 2, bottom: 2, left: 5, right: 10),
+          //   child: TextField(
+          //     autofocus: false,
+          //     decoration: InputDecoration(
+          //       contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+          //       border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          //       labelText: 'Username',
+          //     ),
+          //   ),
+          // ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: IconButton(
-              onPressed : () {}, 
+              onPressed : () {
+                Navigator.push(
+                  context, MaterialPageRoute(
+                    builder: (context) => profilePage()
+                  )
+                );
+              }, 
               icon: Icon(Icons.account_circle_sharp, size: 30,),
             ),
           ),
         ],
-        backgroundColor: ijotua,
+        backgroundColor: ijo,
       ),
 
       body: SafeArea(
@@ -40,16 +59,55 @@ class _homapageState extends State<homapage> {
                 color: ijo
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  IconButton(
-                    onPressed: (){}, 
-                    icon: Icon(Icons.fastfood), 
-                    color: Colors.white, 
-                    iconSize: 40,
-                  )
+                  Column(
+                    children: [
+                      IconButton(
+                        onPressed: (){}, 
+                        icon: Icon(Icons.fastfood), 
+                        color: Colors.white, 
+                        iconSize: 30,
+                      ),
+                      Text('Makanan\nMinuman', style: TextStyle(fontSize: 10, color: putih),)
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(
+                        onPressed: (){}, 
+                        icon: Icon(Icons.motorcycle_outlined), 
+                        color: Colors.white, 
+                        iconSize: 35,
+                      ),
+                      Text('Ojek\nMotor', style: TextStyle(fontSize: 10, color: putih),)
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(
+                        onPressed: (){}, 
+                        icon: Icon(Icons.car_repair_sharp), 
+                        color: Colors.white, 
+                        iconSize: 35,
+                      ),
+                      Text('Ojek\nMobil', style: TextStyle(fontSize: 10, color: putih),)
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(
+                        onPressed: (){}, 
+                        icon: Icon(Icons.shopping_basket_sharp), 
+                        color: Colors.white, 
+                        iconSize: 35,
+                      ),
+                      Text('Belanja', style: TextStyle(fontSize: 10, color: putih),)
+                    ],
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
